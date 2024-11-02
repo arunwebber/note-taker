@@ -1,0 +1,139 @@
+/* General styles for the extension popup */
+body {
+    font-family: Arial, sans-serif;
+    width: 300px; /* Set a fixed width for the container */
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 20px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+input[type="text"], textarea {
+    width: calc(100% - 20px); /* Full width minus padding */
+    max-width: 280px; /* Set a maximum width for the inputs */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+textarea {
+    height: 100px; /* Fixed minimum height for the textarea */
+    resize: vertical; /* Allow vertical resizing */
+}
+
+button {
+    width: 100%; /* Full width for main buttons */
+    height: 40px; /* Fixed height for buttons */
+    padding: 0; /* Remove extra padding */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    box-sizing: border-box; /* Include padding in width calculation */
+    margin-bottom: 10px; /* Space between buttons */
+}
+
+button:hover {
+    opacity: 0.8; /* Slightly reduce opacity on hover */
+}
+
+.tabs {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space out buttons evenly */
+    margin-bottom: 10px; /* Space below the tabs */
+}
+
+.tabs button {
+    width: 48%; /* Make tabs take equal width, leaving a small gap */
+    height: 40px; /* Set a fixed height */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Match tab shape */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+#newNoteButton {
+    background-color: #007bff; /* Blue for New Note tab */
+}
+
+#viewNotesButton {
+    background-color: #28a745; /* Green for View Notes tab */
+}
+
+#saveNoteButton, #saveEditedNoteButton {
+    background-color: #28a745; /* Green for Save buttons */
+}
+
+#saveNoteButton:hover, #saveEditedNoteButton:hover {
+    background-color: #218838; /* Darker green on hover for Save buttons */
+}
+
+#noteContainer, #notesList, #editNoteContainer {
+    margin-top: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack elements vertically */
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+    cursor: pointer; /* Change cursor to pointer for list items */
+}
+
+li:hover {
+    background-color: #f1f1f1; /* Light hover effect */
+}
+
+/* Styles for the draggable note window */
+.note-window {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    position: fixed; /* Fixed position for the window */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Prevent content overflow */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Add padding inside the note window */
+}
+
+/* Header styles for the note window */
+.header {
+    background-color: #007bff; /* Header color */
+    color: white; /* Header text color */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Close button styles for the note window */
+#closeNoteWindowButton {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#closeNoteWindowButton:hover {
+    opacity: 0.8; /* Slightly reduce opacity on hover */
+}

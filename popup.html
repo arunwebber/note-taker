@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="draggable" class="draggable">
+        <h1>Note Taker</h1>
+        <div class="tabs">
+            <button id="newNoteButton">Create New Note</button>
+            <button id="viewNotesButton">Notes</button>
+        </div>
+
+        <div id="noteContainer" style="display: none;">
+            <input type="text" id="noteTitleInput" placeholder="Note Title">
+            <textarea id="noteInput" placeholder="Type your note here..."></textarea>
+            <button id="saveNoteButton">Save Note</button>
+        </div>
+
+        <div id="notesList" style="display: none;">
+            <input type="text" id="searchBar" placeholder="Search notes..." style="width: 100%; padding: 10px; margin-bottom: 10px;"/>
+            <ul id="notes"></ul>
+        </div>
+
+        <div id="editNoteContainer" style="display: none;">
+            <input type="text" id="editNoteTitle" placeholder="Edit Title">
+            <textarea id="editNoteContent" placeholder="Edit your note..."></textarea>
+            <button id="saveEditedNoteButton">Save</button>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
