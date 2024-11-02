@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Text Area with Title and Save Button</title>
+    <style>
+        body {
+            margin: 0; /* Remove default margin */
+            height: 100vh; /* Full height of the viewport */
+            display: flex; /* Use flexbox for centering */
+            flex-direction: column; /* Stack elements vertically */
+            background-color: #f0f0f0; /* Light background for visibility */
+        }
+        .container {
+            flex: 1; /* Take up available space */
+            display: flex; /* Use flexbox for layout */
+            flex-direction: column; /* Stack elements vertically */
+            padding: 10px; /* Add some padding */
+            box-sizing: border-box; /* Include padding in width/height calculations */
+        }
+        input[type="text"] {
+            width: 100%; /* Full width */
+            margin-bottom: 10px; /* Space below the title */
+            padding: 10px; /* Padding for the input */
+            border: 1px solid #ccc; /* Border for the input */
+            border-radius: 4px; /* Rounded corners */
+            box-sizing: border-box; /* Include padding and border in width */
+        }
+        textarea {
+            flex: 1; /* Take up remaining space */
+            padding: 10px; /* Padding for the text area */
+            margin: 0; /* No margin */
+            border: 1px solid #ccc; /* Border for the text area */
+            border-radius: 4px; /* Rounded corners */
+            resize: none; /* Disable default resizing */
+            box-sizing: border-box; /* Include padding and border in width */
+            font-family: inherit; /* Inherit font family for consistency */
+            font-size: inherit; /* Inherit font size for consistency */
+            outline: none; /* Remove outline */
+        }
+        button {
+            padding: 10px 15px; /* Padding for the button */
+            margin-top: 10px; /* Space above the button */
+            border: none; /* No border */
+            border-radius: 4px; /* Rounded corners */
+            background-color: #007bff; /* Blue background */
+            color: white; /* White text */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+        button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container" id="container">
+    <input type="text" placeholder="Title" id="titleField" />
+    <textarea id="textArea" placeholder="Enter Text"></textarea>
+    <button id="saveButton">Save</button>
+</div>
+
+<script src="note.js">
+</script>
+
+</body>
+</html>
