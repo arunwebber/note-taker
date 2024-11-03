@@ -85,11 +85,14 @@ function openNoteForEditing(index) {
         noteWindow.onload = function() {
             noteWindow.document.getElementById("titleField").value = note.title;
             noteWindow.document.getElementById("textArea").value = note.content;
-
+        
+            // Clear any existing click event to avoid duplication
+            noteWindow.document.getElementById("saveButton").onclick = null;
+        
             noteWindow.document.getElementById("saveButton").onclick = function() {
                 saveEditedNoteToStorage(index, noteWindow.document.getElementById("titleField").value, noteWindow.document.getElementById("textArea").value);
             };
-        };
+        };        
     });
 }
 
